@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
+:root{--text:#272727;--link:#6287c3;--light:#a1a1a1;--border:#e8e8e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--text);font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;font-weight:300;line-height:1.95}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.masthead{text-align:center;background:#fff}.masthead-inner{padding:78px 16px 40px}.headline{display:inline-block;font-size:clamp(60px,9vw,112px);font-weight:300;line-height:1.48;letter-spacing:.1em}.author{display:flex;justify-content:center;align-items:center;gap:23px;margin-top:28px;font-size:20px;color:var(--link)}.author span{height:1px;width:45px;background:#b4b4b4}.main-nav{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4.5vw,55px);flex-wrap:wrap;padding:30px 18px 70px}.main-nav a{font-size:19px;letter-spacing:.25em;font-weight:300;white-space:nowrap;color:#555;transition:color .2s}.main-nav a:hover,.main-nav a[aria-current]{color:var(--link)}
+.content-wrap{max-width:1050px;margin:0 auto;padding:12px 24px 95px}.page-title{text-align:center;margin:4px 0 52px}.page-title h1{font-size:32px;letter-spacing:.16em;font-weight:400;margin:8px 0}.page-title p{color:#777}
+.opening{max-width:1080px;margin:0 auto 68px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.opening-image img{width:100%;max-height:380px;object-fit:cover}.opening-text h1{font-weight:400;font-size:28px}.opening-text p{color:#777}.inline-link{color:var(--link)}
+.entry-list{display:grid;grid-template-columns:1fr 1fr;gap:35px}.entry{border-top:1px solid var(--border);padding:18px 0 29px;min-width:0}.entry-visual{margin:0 0 20px;max-height:300px;overflow:hidden}.entry-visual img{height:260px;width:100%;object-fit:cover}.entry h2{font-size:23px;line-height:1.6;font-weight:400;letter-spacing:.07em;margin:0 0 6px}.entry time{display:block;font-size:13px;color:#999;margin-bottom:15px}.entry p{font-size:15px;color:#606060;line-height:2.1;white-space:pre-line;margin:0}.bio{display:grid;grid-template-columns:38% 1fr;gap:48px;align-items:center}.bio-photo img{width:100%;max-height:480px;object-fit:cover}.bio-text p{margin:0 0 10px}.bio-text strong{font-weight:500}.contact{border-top:1px solid var(--border);margin-top:58px;padding-top:25px}.contact h2{font-weight:400;font-size:24px}.contact a{color:var(--link)}
+.footer{border-top:1px solid var(--border);text-align:center;padding:38px 15px 50px;color:#888}.footer p{font-size:17px;letter-spacing:.1em;margin:0}.footer small{font-size:13px}
+.detail{max-width:850px}.detail h1{font-size:32px;font-weight:400}.detail time{color:#999;font-size:13px}.detail>img{max-height:600px;margin:30px auto;object-fit:contain}.detail>p{white-space:pre-wrap}.back-link{display:inline-block;margin-top:28px;color:var(--link)}
+@media(max-width:720px){.masthead-inner{padding:45px 12px 20px}.headline{font-size:clamp(48px,12vw,82px);letter-spacing:.04em}.author{margin-top:12px;font-size:17px}.main-nav{padding:25px 12px 36px;gap:13px 23px}.main-nav a{font-size:14px;letter-spacing:.08em}.opening{display:block;margin-bottom:38px}.opening-text{padding:18px 0}.entry-list{grid-template-columns:1fr;gap:9px}.content-wrap{padding:10px 20px 55px}.page-title{margin-bottom:30px}.bio{display:block}.bio-photo{max-width:420px;margin:auto auto 25px}}
+
+/* 首頁：比照原版的個人照片與單欄文章清單 */
+.homepage .masthead-inner{padding-top:45px;padding-bottom:19px}
+.homepage .headline{font-size:clamp(48px,6.2vw,78px);letter-spacing:.08em;line-height:1.45}
+.homepage .author{font-size:15px;margin-top:14px;gap:16px}
+.homepage .author span{width:32px}
+.homepage .main-nav{padding:24px 15px 52px;gap:clamp(20px,3vw,41px)}
+.homepage .main-nav a{font-size:14px;letter-spacing:.2em}
+.home-portrait{display:flex;justify-content:center;margin:0 auto 58px;padding:0 20px}
+.home-portrait img{width:480px;max-width:100%;height:auto;object-fit:contain}
+.homepage .content-wrap{max-width:850px;padding:0 22px 85px}
+.homepage .entry-list{display:block}
+.homepage .entry{display:grid;grid-template-columns:34% 1fr;gap:29px;padding:26px 0;border-top:0}
+.homepage .entry-visual{margin:0;max-height:none;overflow:visible}
+.homepage .entry-visual img{width:100%;height:auto;aspect-ratio:1.38;object-fit:cover}
+.homepage .entry h2{font-size:21px;margin:0 0 2px}
+.homepage .entry time{font-size:12px;margin-bottom:9px}
+.homepage .entry p{font-size:13px;line-height:1.9}
+@media(max-width:650px){
+ .homepage .masthead-inner{padding-top:26px;padding-bottom:9px}
+ .homepage .headline{font-size:clamp(38px,8vw,56px)}
+ .homepage .author{font-size:11px;margin-top:8px}
+ .homepage .author span{width:21px}
+ .homepage .main-nav{gap:10px 16px;padding:16px 10px 38px}
+ .homepage .main-nav a{font-size:11px;letter-spacing:.08em}
+ .home-portrait{margin-bottom:26px}
+ .home-portrait img{width:min(100%,440px)}
+ .homepage .content-wrap{padding:0 22px 50px}
+ .homepage .entry{grid-template-columns:32% 1fr;gap:15px;padding:18px 0}
+ .homepage .entry h2{font-size:16px}
+ .homepage .entry time{font-size:10px}
+ .homepage .entry p{font-size:12px;line-height:1.7}
+}
+
+/* 內頁依原始截圖重新排版 */
+.inner-page .masthead-inner{padding:25px 16px 9px}
+.inner-page .headline{font-size:clamp(52px,6vw,72px);letter-spacing:.08em;line-height:1.35}
+.inner-page .author{margin-top:15px;gap:14px;font-size:13px}
+.inner-page .author span{width:30px}
+.inner-page .main-nav{gap:clamp(20px,3.2vw,38px);padding:23px 14px 51px}
+.inner-page .main-nav a{font-size:13px;letter-spacing:.19em}
+.inner-page .content-wrap{max-width:1100px;padding:0 26px 85px}
+.inner-page .page-title{margin:0 0 28px}
+.inner-page .page-title h1{font-size:35px;font-weight:400;letter-spacing:.06em;line-height:1.55;margin:0}
+.inner-page .entry-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 28px}
+.inner-page .entry{border:0;padding:0;min-width:0}
+.inner-page .entry-visual{margin:0 0 7px;max-height:none;overflow:hidden}
+.inner-page .entry-visual img{display:block;width:100%;height:auto;aspect-ratio:1.45;object-fit:cover}
+.inner-page .entry h2{font-size:18px;font-weight:400;letter-spacing:.015em;line-height:1.55;margin:0 0 2px}
+.inner-page .entry time{font-size:11px;color:#b5b5b5;line-height:1.5;margin-bottom:11px}
+.inner-page .entry p{font-size:12px;color:#878787;line-height:1.85;white-space:normal;margin:0;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.inner-page .footer{max-width:1100px;margin:0 auto;text-align:left;display:flex;justify-content:space-between;align-items:center;padding:24px 26px 30px;font-size:12px}
+.inner-page .footer p{font-size:12px;letter-spacing:0}
+.inner-page .footer small{font-size:11px}
+/* About Me 專屬左右欄 */
+.about-page .content-wrap{max-width:1100px;padding-top:0;padding-bottom:60px}
+.about-page .bio{display:grid;grid-template-columns:48% 1fr;gap:44px;align-items:start}
+.about-page .bio-photo img{width:100%;max-height:none;aspect-ratio:3/4;object-fit:cover}
+.about-page .bio-text h1{margin:-8px 0 12px;font-size:38px;line-height:1.4;font-weight:400;letter-spacing:.02em}
+.about-page .bio-item{position:relative;margin:0 0 9px;padding-left:29px;color:#888;font-size:15px;line-height:1.8}
+.about-page .bio-item::before{content:'›';position:absolute;left:8px;color:#9aa5b3;font-size:21px;top:-2px}
+.about-page .bio-item strong{font-weight:300}
+.about-page .contact{margin-top:15px;padding:0;border:0}
+.about-page .contact h2{font-size:29px;line-height:1.5;margin:0 0 7px}
+.about-page .contact p{margin:0;font-size:15px;line-height:1.7}
+.about-page .footer{margin-top:0}
+@media(max-width:720px){
+ .inner-page .masthead-inner{padding-top:20px}.inner-page .headline{font-size:clamp(41px,8vw,58px)}
+ .inner-page .main-nav{padding:20px 12px 35px;gap:12px 20px}.inner-page .main-nav a{font-size:11px;letter-spacing:.08em}
+ .inner-page .content-wrap{padding:0 18px 55px}.inner-page .page-title h1{font-size:27px}
+ .inner-page .entry-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 16px}
+ .inner-page .entry h2{font-size:15px}.inner-page .entry p{font-size:11px}
+ .about-page .bio{grid-template-columns:1fr;gap:23px}.about-page .bio-photo{max-width:430px;margin:0 auto}
+ .about-page .bio-text h1{font-size:29px}.about-page .bio-item,.about-page .contact p{font-size:14px}
+}
+@media(max-width:420px){.inner-page .entry-list{grid-template-columns:1fr 1fr;gap:24px 12px}.inner-page .entry h2{font-size:14px}}
+
+/* 完整原圖版：固定封面比例，但不拉伸圖片 */
+.home-portrait img{height:auto;object-fit:contain}
+.about-page .bio-photo img{object-position:center center}
+.inner-page .entry-visual img{object-position:center center}
+
+/* 單一 HTML 頁面的顯示控制 */
+.site-view[hidden]{display:none !important}
